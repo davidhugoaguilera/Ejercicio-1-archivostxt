@@ -1,4 +1,11 @@
-#archivo-salida.py
-f = open ('holamundo.txt','w')
-f.write('hola mundo')
-f.close()
+file = open('mi_archivo.txt', 'w')
+file.write('¡Este es mi primer archivo txt!\n')
+file.close()
+
+file = open('mi_archivo.txt', 'r+')
+file.readline()
+file.write('Esta es la segunda vez que escribo.\n')
+
+file.seek(0)
+print(file.read())
+file.close()
